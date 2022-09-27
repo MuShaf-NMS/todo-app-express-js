@@ -1,0 +1,17 @@
+{
+  "name": "express-js",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "express js App",
+  "main": "index.js",
+  "repository": "github.com/MuShaf-NMS/todo-app-express-js.git",
+  "author": "MuShaf-NMS",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
