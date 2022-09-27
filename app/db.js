@@ -1,12 +1,15 @@
 import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const db = new Sequelize({
-  username: "root",
-  password: "root",
-  database: "todo_express",
-  host: "localhost",
-  port: 3306,
-  dialect: "mysql",
+  username: process.env.DB_USER ?? "root",
+  password: process.env.DB_PASS ?? "root",
+  database: process.env.DB_NAME ?? "todo_express",
+  host: process.env.DB_HOST ?? "localhost",
+  port: process.env.DB_PORT ?? 3306,
+  dialect: process.env.DIALECT ?? "mysql",
   logging: false,
 });
 
@@ -19,7 +22,7 @@ const connect = async () => {
     await db.sync({ alter: true });
     console.info("Database connection established");
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 };
 

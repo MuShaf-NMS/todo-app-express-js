@@ -1,7 +1,9 @@
-import app from "./app/index.js";
+import app from "./app/index";
 import { connect } from "./app/db";
 
-const port = 8000;
+console.log(7, process.env.APP_PORT);
+
+const port = process.env.APP_PORT ?? 8000;
 
 // run server on specified port
 app.listen(port, async () => {
