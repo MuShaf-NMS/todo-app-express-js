@@ -1,4 +1,5 @@
 import express, { json } from "express";
+import router from "./router";
 
 const app = express(); // init app
 
@@ -16,10 +17,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/", (req, res) => {
-  return res.json({
-    test: req.body.test,
-  });
-});
+app.use(router);
 
 export default app;

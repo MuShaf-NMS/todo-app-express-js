@@ -10,7 +10,7 @@
   "private": false,
   "scripts": {
     "dev": "nodemon --es-module-specifier-resolution=node index.js",
-    "serve": "node --es-module-specifier-resolution=node index.js"
+    "start": "node --es-module-specifier-resolution=node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
