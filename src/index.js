@@ -27,7 +27,7 @@ app.listen(port, async () => {
   try {
     await connect();
     console.log(
-      `Development server is running on:\n * http://localhost:${port}`
+      `Development server is running on:\n* http://localhost:${port}`
     );
   } catch (err) {
     console.log("-----------------");
