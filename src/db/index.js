@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+import redis from "./redis.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ const connect = async () => {
   try {
     await db.authenticate();
     await db.sync({ alter: true });
+    await redis.connect();
     console.info("Database connection established");
   } catch (err) {
     throw err;

@@ -18,10 +18,13 @@ const User = db.define("User", {
   address: {
     type: DataTypes.STRING,
   },
+  email: {
+    type: DataTypes.STRING,
+  },
 });
 
 User.hasOne(Auth, { sourceKey: "uuid", foreignKey: "userID" });
-User.hasMany(Todo, { sourceKey: "uuid", foreignKey: "userID" });
-Todo.belongsTo(User, { foreignKey: "userID" });
+// User.hasMany(Todo, { sourceKey: "uuid", foreignKey: "userID" });
+// Todo.belongsTo(User, { foreignKey: "userID" });
 
 export default User;

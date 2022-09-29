@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import db, { connect } from "./db/index.js";
+import { connect } from "./db/index.js";
 import router from "./router/index.js";
 
 const app = express(); // init app
